@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Counter</title>
+        <script>
+            // Wait for page to load
+            document.addEventListener("DOMContentLoaded", () => {
+                // Initialise var
+                let counter = 0;
+
+                // If increase button clicked, increase counter, change innerHTML
+                document.querySelector("#increase").onclick = () => {
+                    counter++;
+                    document.querySelector("h1").innerHTML = counter;
+                };
+                // If decrease butoon clicked
+                document.querySelector("#decrease").onclick = () => {
+                    counter--;
+                    document.querySelector("h1").innerHTML = counter;
+                };
+            });
+        </script>
+    </head>
+    <body>
+        <h1>0</h1>
+        <button id="increase">+</button>
+        <button id="decrease">-</button>
+    </body>
+</html>
